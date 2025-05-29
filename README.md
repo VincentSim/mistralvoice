@@ -32,9 +32,9 @@
 
 ## 📁 File Structure
 
-mistral-voice/
-├── content.js # Injects speech/tts logic into Mistral's page
-└── manifest.json # Chrome extension manifest
+mistral-voice/  
+├── content.js # Injects speech/tts logic into Mistral's page  
+└── manifest.json # Chrome extension manifest  
 
 
 ---
