@@ -3,7 +3,6 @@
   "name": "Mistral Voice - Talk to Le Chat",
   "version": "1.0",
   "description": "Talk to Le Chat from Mistral AI using your voice — natural and hands-free.",
-  "permissions": ["scripting", "activeTab"],
   "host_permissions": ["https://chat.mistral.ai/*"],
   "content_scripts": [
     {
