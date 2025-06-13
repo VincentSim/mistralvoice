@@ -67,5 +67,10 @@ Pull requests and suggestions are welcome. Feel free to open issues for bugs or 
 - Inspired by ChatGPT’s voice mode
 - Built with ❤️ for [Le Chat from Mistral AI](https://chat.mistral.ai)
 
+---
+
+## 📃 License
+
+MIT © Vincent SIMON
 
 
