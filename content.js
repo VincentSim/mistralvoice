@@ -1,5 +1,6 @@
 let selectedLang = "fr-FR";
 
+console.log("mistral_voice_v20250626");
 function createMicButton() {
   const button = document.createElement("button");
 
@@ -97,7 +98,7 @@ function initSpeechToText(textarea) {
 
         if (newPart.trim()) {
           const punctuated = injectPunctuation(newPart);
-          textarea.value += punctuated;
+          textarea.textContent += punctuated;
           textarea.dispatchEvent(new Event('input', { bubbles: true }));
         }
       };
@@ -120,7 +121,8 @@ function initSpeechToText(textarea) {
     isListening = !isListening;
   };
 
-  const wrapper = textarea.closest("div[style*='position:relative']") || textarea.parentNode;
+  const wrapper = textarea.closest("div.py-2") || textarea.parentNode;
+
   wrapper.appendChild(micButton);
 }
 
@@ -151,9 +153,12 @@ function injectPunctuation(transcript) {
   return transcript;
 }
 
+
 // Find the target textarea by placeholder
 function findTargetTextarea() {
-  const textarea = document.querySelector("textarea[placeholder*='Demander au Chat']");
+  const textarea = document.querySelector("div.ProseMirror");
+  console.log(textarea);
+  console.log("textarea");
   if (textarea) {
     initSpeechToText(textarea);
   }
@@ -258,7 +263,7 @@ const observer = new MutationObserver(() => {
   mutationTimeout = setTimeout(() => {
     // --- Injection du bouton micro ---
     const textarea =
-      document.querySelector("textarea[placeholder*='Demander au Chat']") ||
+      document.querySelector("div.ProseMirror") ||
       document.querySelector("textarea[name='message.text']");
     if (textarea && !textarea.dataset.speechInjected) {
       textarea.dataset.speechInjected = "true";
